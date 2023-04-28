@@ -1,0 +1,13 @@
+name: prey_app
+title: prey_app
+username:
+account: edata
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8984727
+bundleId: 7150755
+url: https://edata.shinyapps.io/prey_app/
+when: 1682712525.64295
+lastSyncTime: 1682712525.64296
+asMultiple: FALSE
+asStatic: FALSE
