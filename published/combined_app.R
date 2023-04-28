@@ -35,12 +35,14 @@ cols <- RColorBrewer::brewer.pal(5, "Pastel1")
 colorRampPalette(cols)(23)
 
 # pastel option
-# class_cols <- c("#FBB4AE", "#EDB8B7", "#E0BDC1", "#D3C1CA", "#C6C6D4", "#B9CADE", 
-#   "#B5CFE0", "#B9D5DA", "#BEDAD5", "#C2E0CF", "#C7E5CA", "#CCEBC5",   "#CFE5CA", 
-#   "#D2DFD0", "#D5D9D5", "#D9D3DB", "#DCCDE1", "#E0CCDE","#E6CED3",  "#ECD1C7", 
+# class_cols <- c("#FBB4AE", "#EDB8B7", "#E0BDC1", "#D3C1CA", "#C6C6D4", "#B9CADE",
+#   "#B5CFE0", "#B9D5DA", "#BEDAD5", "#C2E0CF", "#C7E5CA", "#CCEBC5",   "#CFE5CA",
+#   "#D2DFD0", "#D5D9D5", "#D9D3DB", "#DCCDE1", "#E0CCDE","#E6CED3",  "#ECD1C7",
 #   "#F2D3BC", "#F8D6B1", "#FED9A6")
 
-# viridis 
+# quality
+
+# viridis
 class_cols <- viridis::viridis(23)
 names(class_cols) <- unique(prey$class_prey)
 
@@ -89,7 +91,7 @@ ui <- navbarPage(
       ),
     fluidRow(
       column(12,
-             DT::dataTableOutput('table')
+             dataTableOutput('table')
              )
       )
     )
@@ -126,12 +128,11 @@ server <- function(input, output) {
     }, height = function() {200 + (nrow(data())*5.5)})
   
   # prey table 
-  output$table <- DT::renderDataTable({
-    prey_table}, 
-    colnames = c("Listed Species", "Class", "Order", "Family", 
-                 "Prey Species", "Class", "Order", "Family"),
-   # container = table_container, 
-   rownames = FALSE)
+  output$table <- renderDataTable({
+    colnames(prey_table) <- c("Listed Species", "Class", "Order", "Family", 
+                                         "Prey Species", "Class", "Order", "Family")
+    prey_table
+   })
     
 }
 
