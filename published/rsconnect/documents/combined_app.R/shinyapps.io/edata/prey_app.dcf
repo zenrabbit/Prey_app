@@ -5,9 +5,9 @@ account: edata
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 8984727
-bundleId: 7150755
+bundleId: 7150784
 url: https://edata.shinyapps.io/prey_app/
-when: 1682712525.64295
-lastSyncTime: 1682712525.64296
+when: 1682712991.66549
+lastSyncTime: 1682712991.6655
 asMultiple: FALSE
 asStatic: FALSE
