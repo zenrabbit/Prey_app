@@ -7,9 +7,9 @@
 ## load data and packages ------------------------------------------------------
 # load packages
 library(shiny)        # for running app
-library(shinyWidgets) # extra widgets
+#library(shinyWidgets) # extra widgets
 library(tidyverse)    # data tidying
-library(rgbif)        # retrieve taxonomy
+#library(rgbif)        # retrieve taxonomy
 library(shinythemes)  # access theme for app
 
 

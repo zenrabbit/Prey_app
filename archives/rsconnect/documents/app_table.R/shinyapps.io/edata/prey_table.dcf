@@ -1,0 +1,13 @@
+name: prey_table
+title: prey_table
+username:
+account: edata
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8985120
+bundleId: 7150947
+url: https://edata.shinyapps.io/prey_table/
+when: 1682715826.20692
+lastSyncTime: 1682715826.20693
+asMultiple: FALSE
+asStatic: FALSE
