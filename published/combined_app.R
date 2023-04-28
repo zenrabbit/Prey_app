@@ -11,6 +11,7 @@ library(shinyWidgets) # extra widgets
 library(tidyverse)    # data tidying
 library(rgbif)        # retrieve taxonomy
 library(shinythemes)  # access theme for app
+devtools::install_version("MASS", "7.3-51.1")
 
 # read in data
 prey <- read_csv("tidy_prey_full_names.csv") 
